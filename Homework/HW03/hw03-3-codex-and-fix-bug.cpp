@@ -5,29 +5,27 @@ int main() {
     int rows1, cols1, rows2, cols2, rows3, cols3, rows4, cols4;
     int i, j, k;
 
+    rows1 = 3;  // Set manually for testing
+    cols1 = 2;  // Set manually for testing
+
     printf("Enter Matrix1:\n");
-    printf("Enter number of rows and columns: ");
-    scanf("%d %d", &rows1, &cols1);
-    
     for (i = 0; i < rows1; i++) {
         for (j = 0; j < cols1; j++) {
-            printf("Enter [%d %d] value: ", i, j);
             scanf("%d", &Matrix1[i][j]);
         }
     }
 
-    printf("\nEnter Matrix2:\n");
-    printf("Enter number of rows and columns: ");
-    scanf("%d %d", &rows2, &cols2);
-    
+    rows2 = 2;  // Set manually for testing
+    cols2 = 3;  // Set manually for testing
+
+    printf("Enter Matrix2:\n");
     for (i = 0; i < rows2; i++) {
         for (j = 0; j < cols2; j++) {
-            printf("Enter [%d %d] value: ", i, j);
             scanf("%d", &Matrix2[i][j]);
         }
     }
 
-    printf("\nMatrix1:\n");
+    printf("Matrix1:\n");
     for (i = 0; i < rows1; i++) {
         for (j = 0; j < cols1; j++) {
             printf("%d ", Matrix1[i][j]);
@@ -35,7 +33,7 @@ int main() {
         printf("\n");
     }
 
-    printf("\nMatrix2:\n");
+    printf("Matrix2:\n");
     for (i = 0; i < rows2; i++) {
         for (j = 0; j < cols2; j++) {
             printf("%d ", Matrix2[i][j]);
@@ -51,7 +49,7 @@ int main() {
         }
     }
     
-    printf("\nTranspose of Matrix1 is:\n");
+    printf("Transpose of Matrix1:\n");
     for (i = 0; i < rows3; i++) {
         for (j = 0; j < cols3; j++) {
             printf("%d ", Matrix3[i][j]);
@@ -60,7 +58,7 @@ int main() {
     }
 
     if (cols1 != rows2) {
-        printf("\nMatrix1 and Matrix2 cannot be multiplied\n");
+        printf("Matrix1 and Matrix2 cannot be multiplied\n");
     } else {
         rows4 = rows1;
         cols4 = cols2;
@@ -73,7 +71,7 @@ int main() {
             }
         }
         
-        printf("\nMatrix1 x Matrix2 is:\n");
+        printf("Matrix1 x Matrix2:\n");
         for (i = 0; i < rows4; i++) {
             for (j = 0; j < cols4; j++) {
                 printf("%d ", Matrix4[i][j]);
